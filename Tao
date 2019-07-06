@@ -1,0 +1,213 @@
+
+import random
+
+'''
+
+HANGMAN
+
+ 
+
+1. You tell the player the length of the word they're going to guess.
+
+2. You also tell them how many chances they get.
+
+3. They guess letters, adn if they guess right, you tell them and tell them
+
+   the location of that letter in the word. If wrong, Subtract one from their
+
+   chances.
+
+4. Keep going until they run out of chances or guess the word.
+
+5. Note: They can't guess the same letter twice.
+
+'''
+
+ 
+
+#Create a list of words.
+
+#Give data (len of the word and #of chances)
+
+#create letterguess
+
+#create chances
+
+#create options
+
+#check if letterguess finds a match
+
+#if it does tell the user the location of the word
+
+#else subtract 1 from chances
+
+#remove the guessed letter from options
+
+#if word is complete then show victory
+
+#if chances = 0 show defeat
+
+ 
+
+lowercase_letters = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
+
+ 
+
+capital_letters = ('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z')
+
+#we are not going to use these yet
+
+ 
+
+user_options = ('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
+
+ 
+
+wordlistanimals = ('shark','dragon','chicken','crow','swan','earthworm','whale','elephant','cat','hamster','eagle','mosquito','bacteria','buffalo','cow','bear')
+
+ 
+
+def solution(wordlist):
+
+    randint = int(15*random.random())
+
+    #print(randint)
+
+    for i in wordlistanimals:
+
+        if wordlistanimals.index(i) == randint:
+
+            puzzlesolution = wordlistanimals[wordlistanimals.index(i)]
+
+            #print(puzzlesolution)
+
+        else:
+
+            pass
+
+    return puzzlesolution
+
+ 
+
+puzzlesolution = wordlistanimals[wordlistanimals.index(i)]
+
+ 
+
+print(solution(wordlistanimals))
+
+ 
+
+userinput = input('Guess a letter:')
+
+ 
+
+def user(input1):
+
+    if len(puzzlesolution) == 3:
+
+        chances = 2
+
+    elif len(puzzlesolution) == 4:
+
+        chances = 3
+
+    elif len(puzzlesolution) == 5:
+
+        chances = 4
+
+    elif len(puzzlesolution) == 6:
+
+        chances = 5
+
+    elif len(puzzlesolution) == 7:
+
+        chances = 6
+
+    elif len(puzzlesolution) == 8:
+
+        chances = 7
+
+    else:
+
+        chances = 8
+
+ 
+
+ 
+
+def evaluation(input2):
+
+    try:
+
+        #solution_letters: elephant = ('e','l','e','p','h','a','n','t')
+
+        for i in puzzlesolution:
+
+            if userinput == solution_letters[0]:
+
+                print('You guessed the first letter.')
+
+            elif userinput == solution_letters[1]:
+
+                print('You guessed the second letter.')
+
+            elif userinput == solution_letters[2]:
+
+                print('You guessed the third letter.')
+
+            elif userinput == solution_letters[3]:
+
+                print('You guessed the fourth letter.')
+
+            elif userinput == solution_letters[4]:
+
+                print('You guessed the fifth letter.')
+
+            elif userinput == solution_letters[5]:
+
+                print('You guessed the sixth letter.')
+
+            elif userinput == solution_letters[6]:
+
+                print('You guessed the seventh letter.')
+
+            elif userinput == solution_letters[7]:
+
+                print('You guessed the eighth letter.')
+
+            elif userinput == solution_letters[8]:
+
+                print('You guessed the ninth letter.')
+
+            else:
+
+                print('You did not guess right')
+
+ 
+
+    except ValueError:
+
+        print('Value Error. You can only input letters.')
+
+       
+
+    
+
+ 
+
+   
+
+ 
+
+ 
+
+ 
+
+       
+
+ 
+
+
+
+ 
+
